@@ -5,12 +5,14 @@ import { Injectable, NgZone } from '@angular/core';
 })
 export class HighlightService {
 
+  public treeDepth = 0;
+
   constructor(private zone: NgZone) { }
 
   enlight(elt: HTMLElement) {
     this.zone.runOutsideAngular(() => {
 
-      const currentCheckIx = window['checkIx']++;
+      const currentCheckIx = this.treeDepth++;
       setTimeout( () => {
         elt.classList.replace('mat-elevation-z1', 'mat-elevation-z8');
         elt.classList.add('checking');
@@ -25,7 +27,7 @@ export class HighlightService {
   enlightSubChild(elt: HTMLElement) {
     this.zone.runOutsideAngular(() => {
 
-      const currentCheckIx = window['checkIx']++;
+      const currentCheckIx = this.treeDepth++;
       setTimeout( () => {
         elt.classList.add('checking');
         setTimeout(() => {

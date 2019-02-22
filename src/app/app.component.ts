@@ -1,4 +1,5 @@
 import { Component, DoCheck } from '@angular/core';
+import { HighlightService } from './services/highlight.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,10 @@ import { Component, DoCheck } from '@angular/core';
 })
 export class AppComponent implements DoCheck {
 
+  constructor(private highlightService: HighlightService) {}
+
   ngDoCheck(): void {
-    // Hack
-    window['checkIx'] = 0;
+   this.highlightService.treeDepth = 0;
   }
 }
 

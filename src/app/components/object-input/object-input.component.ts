@@ -17,7 +17,7 @@ export class ObjectInputComponent implements OnChanges, OnInit, DoCheck {
   @Input()
   counter: { count: number };
 
-  @ViewChild(MatCard, { read: ElementRef })
+  @ViewChild(MatCard, { read: ElementRef, static: true })
   card: ElementRef;
 
   constructor(private hightlight: HighlightService,

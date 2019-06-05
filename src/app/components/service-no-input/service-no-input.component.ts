@@ -17,7 +17,7 @@ export class ServiceNoInputComponent implements OnChanges, OnInit, DoCheck {
 
   private previousCount: number;
 
-  @ViewChild(MatCard, { read: ElementRef })
+  @ViewChild(MatCard, { read: ElementRef, static: true })
   card: ElementRef;
 
   constructor(private hightlight: HighlightService,

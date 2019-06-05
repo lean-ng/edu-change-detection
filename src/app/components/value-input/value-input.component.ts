@@ -7,7 +7,7 @@ import { CounterService } from 'src/app/services/counter.service';
   selector: 'app-value-input',
   templateUrl: './value-input.component.html',
   styles: [],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class ValueInputComponent
   implements OnChanges, OnInit, DoCheck {
@@ -18,7 +18,7 @@ export class ValueInputComponent
   @Input()
   count: number;
 
-  @ViewChild(MatCard, { read: ElementRef })
+  @ViewChild(MatCard, { read: ElementRef, static: true })
   card: ElementRef;
 
   constructor(private hightlight: HighlightService,

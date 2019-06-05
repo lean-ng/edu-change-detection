@@ -18,9 +18,8 @@ export class ReactiveNoInputComponent implements
   strategy = 'OnPush';
 
   count: number;
-  subCounter: number;
 
-  @ViewChild(MatCard, { read: ElementRef })
+  @ViewChild(MatCard, { read: ElementRef, static: true })
   card: ElementRef;
 
   private counter$Subscription: Subscription;
@@ -40,11 +39,6 @@ export class ReactiveNoInputComponent implements
       this.count = c.count;
       this.cdRef.markForCheck();
     });
-    // // TODO: unsubscribe
-    // this.svc.subCounter$.subscribe( c => {
-    //   this.subCounter = c;
-    //   this.cdRef.markForCheck();
-    // });
   }
 
   ngDoCheck(): void {

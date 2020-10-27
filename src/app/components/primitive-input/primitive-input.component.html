@@ -1,0 +1,14 @@
+<mat-card style="width: 24rem">
+  <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+      <mat-card-subtitle>Strategy: {{ cdStrategy }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content style="padding: 0 1rem;">
+    <p style="margin-top: 1rem; font-size: 1rem;">Current count: {{ count }}</p>
+  </mat-card-content>
+  <mat-card-actions style="display: flex; justify-content: space-around;">
+    <button mat-flat-button color="primary" (click)="incMutated()">Inc with Mutation</button>
+    <button mat-flat-button color="primary" (click)="incImmutable()">Inc with RefChange</button>
+  </mat-card-actions>
+</mat-card>

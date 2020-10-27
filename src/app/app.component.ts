@@ -8,7 +8,7 @@ import { CounterService } from './services/counter.service';
 })
 export class AppComponent {
 
-  constructor(private counterSvc: CounterService) {}
+  constructor(public counterSvc: CounterService) {}
 
   incMutated(): void {
     this.counterSvc.incByMutation();

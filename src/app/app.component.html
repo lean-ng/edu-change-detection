@@ -6,4 +6,7 @@
     <button (click)="incMutated()" mat-flat-button color="primary">Inc with Mutation</button>
     <button (click)="incImmutable()" mat-flat-button color="primary">Inc with Ref Change</button>
   </mat-card>
+  <div class="counter-cards">
+    <app-primitive-input [count]="counterSvc.counter.count"></app-primitive-input>
+  </div>
 </main>

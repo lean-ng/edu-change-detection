@@ -1,5 +1,5 @@
 .global-actions {
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   width: 32rem;
   display: flex;
   justify-content: space-around;
@@ -7,5 +7,10 @@
 
 .counter-cards {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.counter-cards > * {
+  margin-top: 2rem;
 }

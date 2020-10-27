@@ -6,7 +6,7 @@ import { CounterService } from 'src/app/services/counter.service';
   templateUrl: './object-input.component.html',
   styleUrls: ['./object-input.component.css']
 })
-export class ObjectInputComponent implements OnInit, OnChanges {
+export class ObjectInputComponent implements OnInit {
 
   title = 'Object Input';
   cdStrategy = 'Default';
@@ -18,9 +18,6 @@ export class ObjectInputComponent implements OnInit, OnChanges {
   constructor(private counterSvc: CounterService) { }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges(): void {
     this.count = this.counter.count;
   }
 

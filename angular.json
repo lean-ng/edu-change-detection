@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "edu-change-detection"
+    }
+  },
+  "defaultProject": "edu-change-detection",
+  "cli": {
+    "analytics": false
+  }
 }

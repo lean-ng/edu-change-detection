@@ -1,3 +1,9 @@
 <mat-toolbar color="primary">
   <h1>Angular Change Detection</h1>
 </mat-toolbar>
+<main>
+  <mat-card class="global-actions">
+    <button (click)="incMutated()" mat-flat-button color="primary">Inc with Mutation</button>
+    <button (click)="incImmutable()" mat-flat-button color="primary">Inc with Ref Change</button>
+  </mat-card>
+</main>

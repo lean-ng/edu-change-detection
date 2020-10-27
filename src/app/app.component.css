@@ -1,0 +1,6 @@
+.global-actions {
+  margin: 2rem auto;
+  width: 32rem;
+  display: flex;
+  justify-content: space-around;
+}

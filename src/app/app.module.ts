@@ -12,11 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Components
 import { PrimitiveInputComponent } from './components/primitive-input/primitive-input.component';
+import { ObjectInputComponent } from './components/object-input/object-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrimitiveInputComponent
+    PrimitiveInputComponent,
+    ObjectInputComponent
   ],
   imports: [
     BrowserModule,

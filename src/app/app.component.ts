@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
+import { CheckCounterService } from './services/check-counter.service';
 import { CounterService } from './services/counter.service';
 
 @Component({
@@ -6,9 +7,13 @@ import { CounterService } from './services/counter.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements DoCheck {
 
-  constructor(public counterSvc: CounterService) {}
+  constructor(public counterSvc: CounterService, private checkCounter: CheckCounterService) {}
+
+  ngDoCheck(): void {
+    this.checkCounter.checkCount = 0;
+  }
 
   incMutated(): void {
     this.counterSvc.incByMutation();

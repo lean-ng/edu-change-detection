@@ -14,13 +14,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { PrimitiveInputComponent } from './components/primitive-input/primitive-input.component';
 import { ObjectInputComponent } from './components/object-input/object-input.component';
 import { ServiceNoInputComponent } from './components/service-no-input/service-no-input.component';
+import { HighlightCheckDirective } from './directives/highlight-check.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrimitiveInputComponent,
     ObjectInputComponent,
-    ServiceNoInputComponent
+    ServiceNoInputComponent,
+    HighlightCheckDirective
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('edu-change-detection app is running!');
+  it('should display app title', async () => {
+    await page.navigateTo();
+    expect(await page.getTitleText()).toEqual('Angular Change Detection');
   });
 
   afterEach(async () => {

@@ -6,20 +6,15 @@ import { CounterService } from 'src/app/services/counter.service';
   templateUrl: './object-input.component.html',
   styleUrls: ['./object-input.component.css']
 })
-export class ObjectInputComponent implements OnInit {
+export class ObjectInputComponent {
 
   title = 'Object Input';
   cdStrategy = 'Default';
-  count = 0;
 
   @Input()
   counter: { count: number };
 
   constructor(private counterSvc: CounterService) { }
-
-  ngOnInit(): void {
-    this.count = this.counter.count;
-  }
 
   incMutated(): void {
     this.counterSvc.incByMutation();

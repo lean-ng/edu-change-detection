@@ -15,6 +15,7 @@ import { PrimitiveInputComponent } from './components/primitive-input/primitive-
 import { ObjectInputComponent } from './components/object-input/object-input.component';
 import { ServiceNoInputComponent } from './components/service-no-input/service-no-input.component';
 import { HighlightCheckDirective } from './directives/highlight-check.directive';
+import { CounterDisplayComponent } from './components/counter-display/counter-display.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HighlightCheckDirective } from './directives/highlight-check.directive'
     PrimitiveInputComponent,
     ObjectInputComponent,
     ServiceNoInputComponent,
-    HighlightCheckDirective
+    HighlightCheckDirective,
+    CounterDisplayComponent
   ],
   imports: [
     BrowserModule,

@@ -10,11 +10,13 @@ export class ServiceNoInputComponent implements OnInit {
 
   title = 'Service - No Input';
   cdStrategy = 'Default';
-  count = 0;
+
+  counter: { count: number };
+
   constructor(private counterSvc: CounterService) { }
 
   ngOnInit(): void {
-    this.count = this.counterSvc.counter.count;
+    this.counter = this.counterSvc.counter;
   }
 
   incMutated(): void {

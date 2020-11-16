@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CounterService } from 'src/app/services/counter.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { CounterService } from 'src/app/services/counter.service';
   templateUrl: './primitive-input.component.html',
   styleUrls: ['./primitive-input.component.css']
 })
-export class PrimitiveInputComponent implements OnInit {
+export class PrimitiveInputComponent {
 
   title = 'Primitive Input';
   cdStrategy = 'Default';
@@ -15,9 +15,6 @@ export class PrimitiveInputComponent implements OnInit {
   count: number;
 
   constructor(private counterSvc: CounterService) { }
-
-  ngOnInit(): void {
-  }
 
   incMutated(): void {
     this.counterSvc.incByMutation();

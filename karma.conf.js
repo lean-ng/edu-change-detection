@@ -15,6 +15,9 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    jasmineHtmlReporters: {
+      suppressAll: true
+    },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/edu-change-detection'),
       subdir: '.',

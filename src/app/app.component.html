@@ -1,14 +1,15 @@
 <mat-toolbar color="primary">
-  <h1>Angular Change Detection</h1>
+  <h1>Angular Change Detection {{ infoMsg }}</h1>
 </mat-toolbar>
 <main>
   <mat-card class="global-actions">
     <button (click)="incMutated()" mat-flat-button color="primary">Inc with Mutation</button>
-    <button disabled (click)="incImmutable()" mat-flat-button color="primary">Inc with Ref Change</button>
+    <button (click)="incImmutable()" mat-flat-button color="primary">Inc with Ref Change</button>
   </mat-card>
   <div class="counter-cards">
     <app-primitive-input [count]="counterSvc.counter.count"></app-primitive-input>
     <app-object-input [counter]="counterSvc.counter"></app-object-input>
     <app-service-no-input></app-service-no-input>
+    <app-reactive></app-reactive>
   </div>
 </main>

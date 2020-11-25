@@ -16,6 +16,7 @@ import { ObjectInputComponent } from './components/object-input/object-input.com
 import { ServiceNoInputComponent } from './components/service-no-input/service-no-input.component';
 import { HighlightCheckDirective } from './directives/highlight-check.directive';
 import { CounterDisplayComponent } from './components/counter-display/counter-display.component';
+import { ReactiveComponent } from './components/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CounterDisplayComponent } from './components/counter-display/counter-di
     ObjectInputComponent,
     ServiceNoInputComponent,
     HighlightCheckDirective,
-    CounterDisplayComponent
+    CounterDisplayComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,

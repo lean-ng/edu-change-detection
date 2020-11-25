@@ -1,15 +1,16 @@
-import { Component, Input } from '@angular/core';
-import { CounterService } from 'src/app/services/counter.service';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {CounterService} from 'src/app/services/counter.service';
 
 @Component({
   selector: 'app-object-input',
   templateUrl: './object-input.component.html',
-  styleUrls: ['./object-input.component.css']
+  styleUrls: ['./object-input.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ObjectInputComponent {
+export class ObjectInputComponent implements OnChanges {
 
   title = 'Object Input';
-  cdStrategy = 'Default';
+  cdStrategy = 'Push';
 
   @Input()
   counter: { count: number };
@@ -22,5 +23,9 @@ export class ObjectInputComponent {
 
   incImmutable(): void {
     this.counterSvc.incByRefChange();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('Object Input', changes);
   }
 }

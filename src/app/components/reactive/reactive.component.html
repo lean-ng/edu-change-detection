@@ -1,11 +1,11 @@
 <mat-card class="mat-elevation-z1" style="width: 24rem">
   <mat-card-header>
-      <mat-card-title>{{ title }}</mat-card-title>
-      <mat-card-subtitle>Strategy: {{ cdStrategy }}</mat-card-subtitle>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-subtitle>Strategy: {{ cdStrategy }}</mat-card-subtitle>
   </mat-card-header>
   <mat-divider></mat-divider>
   <mat-card-content style="padding: 0 1rem;">
-    <app-counter-display [count]="counter.count"></app-counter-display>
+    <app-counter-display [count]="(counter$ | async).count"></app-counter-display>
   </mat-card-content>
   <mat-card-actions style="display: flex; justify-content: space-around;">
     <button mat-flat-button color="primary" (click)="incMutated()">Inc with Mutation</button>
